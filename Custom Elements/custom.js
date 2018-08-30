@@ -91,6 +91,24 @@ class ProfileBox extends HTMLElement {
     wrapper.appendChild(infoWrapper);
     
   }
+
+  static get observedAttributes() {
+    return ['disabled', 'open', 'class'];
+  }
+
+  connectedCallback() {
+    console.log('Connected');
+  }
+
+  disconnectedCallback() {
+    console.log('disconnected');
+  }
+
+  attributeChangedCallback(attrName, oldVal, newVal) {
+   console.log('attrName:', attrName);
+   console.log('oldVal:', oldVal);
+   console.log('newVal:', newVal);
+  }
 }
 
 // Define the new element

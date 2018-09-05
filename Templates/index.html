@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Shadow Dom">
+  <meta name="author" content="Huge">
+
+</head>
+<body> 
+ 
+  <template id="super-p">
+  <style>
+    p {
+      color: white;
+      background-color: #666;
+      padding: 5px;
+    }
+  </style>
+    <p>I am super P</p>
+  </template>
+  <demo-paragraph text="HOLA"></demo-paragraph>
+  <demo-paragraph></demo-paragraph>
+  <script src="template.js"></script>
+</body>
+</html>

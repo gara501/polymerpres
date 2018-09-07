@@ -1,5 +1,5 @@
 // Create a class for the element
-class ProfileBox extends HTMLElement {
+class ProfileCardm extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -112,4 +112,4 @@ class ProfileBox extends HTMLElement {
 }
 
 // Define the new element
-customElements.define('profile-box', ProfileBox);
+customElements.define('profile-cardm', ProfileCardm);

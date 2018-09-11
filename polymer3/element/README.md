@@ -1,6 +1,6 @@
 # \<poly3-element\>
 
-testing
+test
 
 ## Install the Polymer-CLI
 

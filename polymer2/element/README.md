@@ -1,6 +1,6 @@
-# \<element-poly2\>
+# \<poly2-element\>
 
-demo element
+test
 
 ## Install the Polymer-CLI
 

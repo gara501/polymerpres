@@ -1,6 +1,6 @@
 {
   "name": "poly3-element",
-  "description": "testing",
+  "description": "test",
   "main": "poly3-element.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0-pre.13"

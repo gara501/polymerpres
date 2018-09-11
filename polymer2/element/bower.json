@@ -1,7 +1,7 @@
 {
-  "name": "element-poly2",
-  "description": "demo element",
-  "main": "element-poly2.html",
+  "name": "poly2-element",
+  "description": "test",
+  "main": "poly2-element.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0"
   },

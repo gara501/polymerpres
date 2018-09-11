@@ -1,8 +1,8 @@
-import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
 
 /**
  * `poly3-element`
- * testing
+ * test
  *
  * @customElement
  * @polymer
@@ -10,21 +10,27 @@ import {PolymerElement} from '@polymer/polymer/polymer-element.js';
  */
 class Poly3Element extends PolymerElement {
   static get template() {
-    return `
+    return html`
       <style>
         :host {
           display: block;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h2>Hello [[name]]!</h2>
+      <p>[[roprop]]</p>
     `;
   }
   static get properties() {
     return {
-      prop1: {
+      name: {
         type: String,
-        value: 'poly3-element',
+        value: 'DEVELOPER',
       },
+      roprop: {
+        type: String,
+        value: 'YOU CAN\'T TOUCH ME',
+        readOnly: true,
+      }
     };
   }
 }

@@ -1,0 +1,64 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../iron-form/iron-form.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<dom-module id="poly2-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      --paper-input-container-invalid-color {
+        --error-color: red;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <paper-input always-float-label label="Floating label"></paper-input>
+    <paper-input label="username">
+      <iron-icon icon="mail" slot="prefix"></iron-icon>
+      <div slot="suffix">@email.com</div>
+    </paper-input>
+    <paper-input label="this input requires some text" required auto-validate error-message="needs some text!"></paper-input>
+    <paper-input label="this input requires letters only" auto-validate pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
+    <paper-input label="this input requires letters only" auto-validate pattern="[a-zA-Z]*" error-message="letters only!" value="pre-filled 123"></paper-input>
+    <paper-input label="this input will only let you type letters" auto-validate allowed-pattern="[a-zA-Z]"></paper-input>
+    
+    <iron-form>
+      <form method="get" action="/form/handler">
+        <paper-input id="inputForValidation" required label="this input is manually validated" pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
+        <paper-button raised on-click="validate">Validate</paper-button>
+        <button>Validate</button>
+      </form>
+    </iron-form>
+
+    
+  </template>
+
+  <script>
+    /**
+     * `poly2-element`
+     * test
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class Poly2Element extends Polymer.Element {
+      static get is() { return 'poly2-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'poly2-element'
+          }
+        };
+      }
+      validate(e) {
+        this.shadowRoot.querySelector('iron-form').validate();
+      }
+    }
+
+    window.customElements.define(Poly2Element.is, Poly2Element);
+  </script>
+</dom-module>

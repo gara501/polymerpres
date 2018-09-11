@@ -1,0 +1,7 @@
+{
+  "name": "poly3app",
+  "short_name": "poly3app",
+  "description": "testing",
+  "start_url": "/",
+  "display": "standalone"
+}

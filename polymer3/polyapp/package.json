@@ -2,6 +2,7 @@
   "name": "poly3app",
   "description": "testing",
   "dependencies": {
+    "@polymer/lit-element": "^0.5.2",
     "@polymer/polymer": "^3.0.0-pre.13"
   },
   "devDependencies": {

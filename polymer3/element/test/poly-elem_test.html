@@ -4,36 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>poly3-element test</title>
+    <title>poly-elem test</title>
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/wct-browser-legacy/browser.js"></script>
 
-    <script type="module" src="../poly3-element.js"></script>
+    <script type="module" src="../poly-elem.js"></script>
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <poly3-element></poly3-element>
+        <poly-elem></poly-elem>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <poly3-element prop1="new-prop1"></poly3-element>
+        <poly-elem prop1="new-prop1"></poly-elem>
       </template>
     </test-fixture>
 
     <script type="module">
-      suite('poly3-element', () => {
+      suite('poly-elem', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'poly3-element');
+          assert.equal(element.prop1, 'poly-elem');
           const elementShadowRoot = element.shadowRoot;
           const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello poly3-element!');
+          assert.equal(elementHeader.innerHTML, 'Hello poly-elem!');
         });
 
         test('setting a property on the element works', () => {

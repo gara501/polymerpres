@@ -1,4 +1,4 @@
-# \<poly3-element\>
+# \<poly-elem\>
 
 test
 
